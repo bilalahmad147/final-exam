@@ -1,0 +1,12 @@
+{
+  "name": "final-exam",
+  "displayName": "final-exam",
+  "expo": {
+    "name": "final-exam",
+    "slug": "final-exam",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
