@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, TextInput, View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-// import { firebase } from '../Config/Config'
+import { firebase } from '../Config/Config'
 
 
 const StudentLogin = ({ navigation }) => {
@@ -12,33 +12,33 @@ const StudentLogin = ({ navigation }) => {
     const [password, setPassword] = useState('')
 
     const onLoginPress = () => {
-        //     firebase
-        //         .auth()
-        //         .signInWithEmailAndPassword(email, password)
-        //         .then((response) => {
-        //             const uid = response.user.uid
-        //             const usersRef = firebase.firestore().collection('users')
-        //             usersRef
-        //                 .doc(uid)
-        //                 .get()
-        //                 .then(firestoreDocument => {
-        //                     if (!firestoreDocument.exists) {
-        //                         alert("User does not exist anymore.")
-        //                         return;
-        //                     }
-        //                     const user = firestoreDocument.data()
-        //                     navigation.navigate('Home', { user: user })
-        //                 })
-        //                 .catch(error => {
-        //                     alert(error)
-        //                 });
-        //         })
-        //         .catch(error => {
-        //             alert(error)
-        //         })
+        firebase
+            .auth()
+            .signInWithEmailAndPassword(email, password)
+            .then((response) => {
+                const uid = response.user.uid
+                const usersRef = firebase.firestore().collection('users')
+                usersRef
+                    .doc(uid)
+                    .get()
+                    .then(firestoreDocument => {
+                        if (!firestoreDocument.exists) {
+                            alert("User does not exist anymore.")
+                            return;
+                        }
+                        const user = firestoreDocument.data()
+                        navigation.navigate('Home', { user: user })
+                    })
+                    .catch(error => {
+                        alert(error)
+                    });
+            })
+            .catch(error => {
+                alert(error)
+            })
 
-        //     setEmail("");
-        //     setPassword("");
+        setEmail("");
+        setPassword("");
     }
 
     return (
