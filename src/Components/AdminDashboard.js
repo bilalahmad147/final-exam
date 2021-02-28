@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
 import { firebase } from '../Config/Config'
+import TrashStu from './TrashStu'
+import TrashCom from './TrashCom'
 
 
 const AdminDashboard = ({ navigation }) => {
@@ -55,9 +57,7 @@ const AdminDashboard = ({ navigation }) => {
                                     <Text style={styles.text1}>Job Title: {ind.jobPost}</Text>
                                     <Text style={styles.text1}>CityName: {ind.userCityName}</Text>
                                     <Text style={styles.text1}>PhoneNumber: {ind.userPhoneNum}</Text>
-                                    <TouchableOpacity>
-                                        <Text style={styles.icon}><Icon name="trash" size={20} /></Text>
-                                    </TouchableOpacity>
+                                    <TrashCom id={ind.id} />
                                 </View>
                             })
                         }
@@ -74,9 +74,7 @@ const AdminDashboard = ({ navigation }) => {
                                     <Text style={styles.text1}>Cgpa: {ind.userCgpa}</Text>
                                     <Text style={styles.text1}>CityName: {ind.userCityName}</Text>
                                     <Text style={styles.text1}>PhoneNumber: {ind.userPhoneNum}</Text>
-                                    <TouchableOpacity>
-                                        <Text style={styles.icon}><Icon name="trash" size={20} /></Text>
-                                    </TouchableOpacity>
+                                    <TrashStu id={ind.id} />
                                 </View>
                             })
                         }

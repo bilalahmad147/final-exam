@@ -82,13 +82,13 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     view1: {
-        backgroundColor: '#DF6589FF',
+        backgroundColor: '#3C1053FF',
         padding: 9,
         borderRadius: 10,
         margin: 10,
     },
     text1: {
-        color: "#3C1053FF",
+        color: "#DF6589FF",
         fontSize: 20,
         textAlign: 'center',
     },
