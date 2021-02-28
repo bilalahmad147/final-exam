@@ -27,7 +27,7 @@ const StudentLogin = ({ navigation }) => {
                             return;
                         }
                         const user = firestoreDocument.data()
-                        navigation.navigate('Home', { user: user })
+                        navigation.navigate('MakeProfile', { user: user })
                     })
                     .catch(error => {
                         alert(error)
