@@ -31,7 +31,7 @@ export default function App() {
           fontWeight: 'bold',
         },
       }}>
-        <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ title: "HomeScreen" }} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ title: "Recruitment System" }} />
         <Stack.Screen name="StudentLogin" component={StudentLogin} options={{ title: "StudentLogin" }} />
         <Stack.Screen name="StudentSignup" component={StudentSignup} options={{ title: "StudentSignup" }} />
         <Stack.Screen name="StudentProfile" component={StudentProfile} options={{ title: "StudentProfile" }} />

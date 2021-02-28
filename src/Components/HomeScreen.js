@@ -14,7 +14,7 @@ const HomeScreen = ({ navigation }) => {
                     <Text style={styles.text}><Icon name="university" size={100} /></Text>
                 </View>
                 <View style={{ flex: 1 }}>
-                    <Text style={styles.text}>Home Screen</Text>
+                    <Text style={styles.text}>Recruitment System</Text>
                 </View>
                 <View style={{ flex: 1 }}>
                     <TouchableOpacity onPress={() => navigation.navigate('StudentLogin')} style={styles.btn}>
