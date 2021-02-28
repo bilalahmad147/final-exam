@@ -23,6 +23,12 @@ const MakeProfile = ({ navigation }) => {
         <View style={styles.container}>
             <ScrollView>
                 <View style={{ flex: 1 }}>
+                    <Text style={styles.text}><Icon name="male" size={100} /></Text>
+                </View>
+                <View style={{ flex: 1 }}>
+                    <Text style={styles.text}>Home Screen</Text>
+                </View>
+                <View style={{ flex: 1 }}>
                     <TouchableOpacity onPress={() => navigation.navigate('StudentProfile')} style={styles.btn}>
                         <Text style={styles.btnText}><Icon name="plus" size={20} /> Make Profile</Text>
                     </TouchableOpacity>
@@ -35,6 +41,7 @@ const MakeProfile = ({ navigation }) => {
                         userData.map((ind, key) => {
                             return <View style={styles.view1} key={key}>
                                 <Text style={styles.text1}>Company Name: {ind.userName}</Text>
+                                <Text style={styles.text1}>Job Title: {ind.jobPost}</Text>
                                 <Text style={styles.text1}>CityName: {ind.userCityName}</Text>
                                 <Text style={styles.text1}>PhoneNumber: {ind.userPhoneNum}</Text>
                             </View>

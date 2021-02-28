@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
+
 
 const HomeScreen = ({ navigation }) => {
 
@@ -9,8 +10,11 @@ const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <ScrollView>
-                <View style={{ flex: 1, padding: 30, marginTop: 30, alignItems: 'center' }}>
-                    {/* <Image style={{ width: 300, height: 170 }} source={require('./imgs/HomeScreenImg.png')} /> */}
+                <View style={{ flex: 1 }}>
+                    <Text style={styles.text}><Icon name="university" size={100} /></Text>
+                </View>
+                <View style={{ flex: 1 }}>
+                    <Text style={styles.text}>Home Screen</Text>
                 </View>
                 <View style={{ flex: 1 }}>
                     <TouchableOpacity onPress={() => navigation.navigate('StudentLogin')} style={styles.btn}>
@@ -19,7 +23,7 @@ const HomeScreen = ({ navigation }) => {
                     <TouchableOpacity onPress={() => navigation.navigate('AdminLogin')} style={styles.btn}>
                         <Text style={styles.btnText}><Icon name="plus" size={20} /> Admin Login</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigation.navigate('CompanyLogin')} style={styles.btn}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Job')} style={styles.btn}>
                         <Text style={styles.btnText}><Icon name="plus" size={20} /> Company Login</Text>
                     </TouchableOpacity>
                 </View>
@@ -35,7 +39,12 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
     text: {
+        color: "#3C1053FF",
+        paddingTop: 30,
+        fontSize: 30,
         textAlign: 'center',
+        fontWeight: 'bold',
+        fontStyle: 'italic',
     },
     btn: {
         backgroundColor: "#DF6589FF",

@@ -2,50 +2,33 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, TextInput, View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-// import { firebase } from '../Config/Config'
 
 
 const AdminLogin = ({ navigation }) => {
+
+    const mail = 'admin@gmail.com'
+    const pass = '1234'
 
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const onLoginPress = () => {
-        //     firebase
-        //         .auth()
-        //         .signInWithEmailAndPassword(email, password)
-        //         .then((response) => {
-        //             const uid = response.user.uid
-        //             const usersRef = firebase.firestore().collection('users')
-        //             usersRef
-        //                 .doc(uid)
-        //                 .get()
-        //                 .then(firestoreDocument => {
-        //                     if (!firestoreDocument.exists) {
-        //                         alert("User does not exist anymore.")
-        //                         return;
-        //                     }
-        //                     const user = firestoreDocument.data()
-        //                     navigation.navigate('Home', { user: user })
-        //                 })
-        //                 .catch(error => {
-        //                     alert(error)
-        //                 });
-        //         })
-        //         .catch(error => {
-        //             alert(error)
-        //         })
+        if (email == email && password == pass) {
+            navigation.navigate('AdminDashboard')
+        } else {
+            alert('Email or password is incorrect.')
+        }
 
-        //     setEmail("");
-        //     setPassword("");
+        setEmail("");
+        setPassword("");
     }
 
     return (
         <View style={styles.container}>
             <ScrollView>
                 <View style={{ flex: 1 }}>
-                    <Text style={styles.text}><Icon name="ambulance" size={100} /></Text>
+                    <Text style={styles.text}><Icon name="unlock" size={100} /></Text>
                 </View>
                 <View style={{ flex: 1 }}>
                     <Text style={styles.text}>Login To Proceed</Text>
@@ -70,7 +53,8 @@ const AdminLogin = ({ navigation }) => {
                         <Text style={styles.btnText}><Icon name="plus" size={20} /> Login</Text>
                     </TouchableOpacity>
                     <View style={styles.footerView}>
-                        <Text style={styles.footerText}>Don't have an account? <Text onPress={() => navigation.navigate('StudentSignup')} style={styles.footerLink}>Sign up</Text></Text>
+                        <Text style={styles.footerText}>Admin mail and password will be hardcode provided</Text>
+                        <Text style={styles.footerText}>email : 'admin@gmail.com' password: '1234'</Text>
                     </View>
                 </View>
                 <StatusBar style="auto" />

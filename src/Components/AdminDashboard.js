@@ -29,6 +29,12 @@ const AdminDashboard = ({ navigation }) => {
         <View style={styles.container}>
             <ScrollView>
                 <View style={{ flex: 1 }}>
+                    <Text style={styles.text}><Icon name="tasks" size={100} /></Text>
+                </View>
+                <View style={{ flex: 1 }}>
+                    <Text style={styles.text}>Admin DashBoard</Text>
+                </View>
+                <View style={{ flex: 1 }}>
                     <TouchableOpacity onPress={getCompaniesList} style={styles.btn}>
                         <Text style={styles.btnText}><Icon name="plus" size={20} /> Companies List</Text>
                     </TouchableOpacity>
@@ -47,9 +53,7 @@ const AdminDashboard = ({ navigation }) => {
                                     <Text style={styles.text1}>Company Name: {ind.userName}</Text>
                                     <Text style={styles.text1}>CityName: {ind.userCityName}</Text>
                                     <Text style={styles.text1}>PhoneNumber: {ind.userPhoneNum}</Text>
-                                    <TouchableOpacity onPress={
-                                        firebase.database.ref(`/students/${key}`).removeValue()
-                                    }>
+                                    <TouchableOpacity>
                                         <Text style={styles.icon}><Icon name="trash" size={20} /></Text>
                                     </TouchableOpacity>
                                 </View>
@@ -67,9 +71,7 @@ const AdminDashboard = ({ navigation }) => {
                                     <Text style={styles.text1}>Cgpa: {ind.userCgpa}</Text>
                                     <Text style={styles.text1}>CityName: {ind.userCityName}</Text>
                                     <Text style={styles.text1}>PhoneNumber: {ind.userPhoneNum}</Text>
-                                    <TouchableOpacity onPress={
-                                        firebase.database.ref(`/companies/${key}`).removeValue()
-                                    }>
+                                    <TouchableOpacity>
                                         <Text style={styles.icon}><Icon name="trash" size={20} /></Text>
                                     </TouchableOpacity>
                                 </View>

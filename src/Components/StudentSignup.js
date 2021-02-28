@@ -54,7 +54,7 @@ const SignUp = ({ navigation }) => {
         <View style={styles.container}>
             <ScrollView>
                 <View style={{ flex: 1 }}>
-                    <Text style={styles.text}><Icon name="ambulance" size={100} /></Text>
+                    <Text style={styles.text}><Icon name="university" size={100} /></Text>
                 </View>
                 <View style={{ flex: 1 }}>
                     <Text style={styles.text}>Sign Up</Text>

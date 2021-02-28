@@ -4,9 +4,10 @@ import { StyleSheet, TextInput, View, Text, TouchableOpacity, ScrollView } from 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { firebase } from '../Config/Config'
 
-const CompanyLogin = ({ navigation }) => {
+const Job = ({ navigation }) => {
 
     const [name, setName] = useState('')
+    const [job, setJob] = useState('')
     const [cityName, setCityName] = useState('')
     const [phoneNum, setPhoneNum] = useState('')
 
@@ -21,16 +22,17 @@ const CompanyLogin = ({ navigation }) => {
         const company = {
             id: key,
             userName: name,
+            jobPost: job,
             userCityName: cityName,
             userPhoneNum: phoneNum
         }
 
         firebase.database().ref('companies/' + key).set(company)
-        navigation.navigate('StudentsDetail')
 
         setName('')
         setCityName('')
         setPhoneNum('')
+        setJob('')
 
     }
 
@@ -46,9 +48,16 @@ const CompanyLogin = ({ navigation }) => {
                 <View style={{ flex: 6 }}>
                     <TextInput
                         style={styles.input}
-                        placeholder="Enter Name.."
+                        placeholder="Enter Company Name.."
                         value={name}
                         onChangeText={(text) => setName(text)}
+                        autoCapitalize="none"
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Enter Job Title.."
+                        value={name}
+                        onChangeText={(text) => setJob(text)}
                         autoCapitalize="none"
                     />
                     <TextInput
@@ -66,7 +75,10 @@ const CompanyLogin = ({ navigation }) => {
                         autoCapitalize="none"
                     />
                     <TouchableOpacity onPress={sendCompanyDetail} style={styles.btn}>
-                        <Text style={styles.btnText}>Submit Detail <Icon name="share" size={20} /></Text>
+                        <Text style={styles.btnText}>Post a Job <Icon name="share" size={20} /></Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => { navigation.navigate('StudentsDetail') }} style={styles.btn}>
+                        <Text style={styles.btnText}>Students List <Icon name="share" size={20} /></Text>
                     </TouchableOpacity>
                 </View>
                 <StatusBar style="auto" />
@@ -106,4 +118,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default CompanyLogin;
+export default Job;
