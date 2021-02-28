@@ -46,11 +46,13 @@ const AdminDashboard = ({ navigation }) => {
                     </TouchableOpacity>
                 </View>
                 <View style={{ flex: 6 }}>
+                <Text style={styles.text}>Companies List</Text>
                     <View>
                         {
                             companies.map((ind, key) => {
                                 return <View style={styles.view1} key={key}>
                                     <Text style={styles.text1}>Company Name: {ind.userName}</Text>
+                                    <Text style={styles.text1}>Job Title: {ind.jobPost}</Text>
                                     <Text style={styles.text1}>CityName: {ind.userCityName}</Text>
                                     <Text style={styles.text1}>PhoneNumber: {ind.userPhoneNum}</Text>
                                     <TouchableOpacity>
@@ -60,6 +62,7 @@ const AdminDashboard = ({ navigation }) => {
                             })
                         }
                     </View>
+                    <Text style={styles.text}>Students List</Text>
                     <View>
                         {
                             students.map((ind, key) => {

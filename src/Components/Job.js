@@ -56,7 +56,7 @@ const Job = ({ navigation }) => {
                     <TextInput
                         style={styles.input}
                         placeholder="Enter Job Title.."
-                        value={name}
+                        value={job}
                         onChangeText={(text) => setJob(text)}
                         autoCapitalize="none"
                     />

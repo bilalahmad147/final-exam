@@ -8,7 +8,6 @@ import HomeScreen from './src/Components/HomeScreen';
 import StudentLogin from './src/Components/StudentLogin'
 import StudentSignup from './src/Components/StudentSignup'
 import AdminLogin from './src/Components/AdminLogin'
-import CompanyLogin from './src/Components/CompanyLogin'
 import MakeProfile from './src/Components/MakeProfile'
 import StudentProfile from './src/Components/StudentProfile'
 import SubmitDetail from './src/Components/SubmitDetail'
@@ -38,11 +37,10 @@ export default function App() {
         <Stack.Screen name="StudentProfile" component={StudentProfile} options={{ title: "StudentProfile" }} />
         <Stack.Screen name="SubmitDetail" component={SubmitDetail} options={{ title: "SubmitDetail" }} />
         <Stack.Screen name="AdminLogin" component={AdminLogin} options={{ title: "AdminLogin" }} />
-        <Stack.Screen name="CompanyLogin" component={CompanyLogin} options={{ title: "CompanyLogin" }} />
         <Stack.Screen name="StudentsDetail" component={StudentsDetail} options={{ title: "StudentsDetail" }} />
         <Stack.Screen name="MakeProfile" component={MakeProfile} options={{ title: "MakeProfile" }} />
         <Stack.Screen name="AdminDashboard" component={AdminDashboard} options={{ title: "AdminDashboard" }} />
-        <Stack.Screen name="Job" component={Job} options={{ title: "Job" }} />
+        <Stack.Screen name="Job" component={Job} options={{ title: "Post Job" }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
