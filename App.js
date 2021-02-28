@@ -14,6 +14,7 @@ import MakeProfile from './src/Components/MakeProfile'
 import StudentProfile from './src/Components/StudentProfile'
 import SubmitDetail from './src/Components/SubmitDetail'
 import StudentsDetail from './src/Components/StudentsDetail'
+import AdminDashboard from './src/Components/AdminDashboard'
 
 export default function App() {
 
@@ -39,7 +40,8 @@ export default function App() {
         {/* <Stack.Screen name="AdminLogin" component={AdminLogin} options={{ title: "AdminLogin" }} /> */}
         {/* <Stack.Screen name="CompanyLogin" component={CompanyLogin} options={{ title: "CompanyLogin" }} /> */}
         {/* <Stack.Screen name="StudentsDetail" component={StudentsDetail} options={{ title: "StudentsDetail" }} /> */}
-        <Stack.Screen name="MakeProfile" component={MakeProfile} options={{ title: "MakeProfile" }} />
+        {/* <Stack.Screen name="MakeProfile" component={MakeProfile} options={{ title: "MakeProfile" }} /> */}
+        <Stack.Screen name="AdminDashboard" component={AdminDashboard} options={{ title: "AdminDashboard" }} />
         {/* <Stack.Screen name="Details" component={Details} options={{ title: "Details" }} /> */}
       </Stack.Navigator>
     </NavigationContainer>
