@@ -38,8 +38,8 @@ export default function App() {
         {/* <Stack.Screen name="SubmitDetail" component={SubmitDetail} options={{ title: "SubmitDetail" }} /> */}
         {/* <Stack.Screen name="AdminLogin" component={AdminLogin} options={{ title: "AdminLogin" }} /> */}
         {/* <Stack.Screen name="CompanyLogin" component={CompanyLogin} options={{ title: "CompanyLogin" }} /> */}
-        <Stack.Screen name="StudentsDetail" component={StudentsDetail} options={{ title: "StudentsDetail" }} />
-        {/* <Stack.Screen name="MakeProfile" component={MakeProfile} options={{ title: "MakeProfile" }} /> */}
+        {/* <Stack.Screen name="StudentsDetail" component={StudentsDetail} options={{ title: "StudentsDetail" }} /> */}
+        <Stack.Screen name="MakeProfile" component={MakeProfile} options={{ title: "MakeProfile" }} />
         {/* <Stack.Screen name="Details" component={Details} options={{ title: "Details" }} /> */}
       </Stack.Navigator>
     </NavigationContainer>
