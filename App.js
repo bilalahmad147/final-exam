@@ -6,6 +6,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StyleSheet } from 'react-native';
 import HomeScreen from './src/Components/HomeScreen';
 import Details from './src/Components/Details'
+import StudentLogin from './src/Components/StudentLogin'
+import StudentSignup from './src/Components/StudentSignup'
+import AdminLogin from './src/Components/AdminLogin'
+import CompanyLogin from './src/Components/CompanyLogin'
 
 export default function App() {
 
@@ -16,15 +20,18 @@ export default function App() {
       <StatusBar style="auto" />
       <Stack.Navigator screenOptions={{
         headerStyle: {
-          backgroundColor: 'red',
-
+          backgroundColor: '#DF6589FF',
         },
-        headerTintColor: '#fff',
+        headerTintColor: '#3C1053FF',
         headerTitleStyle: {
           fontWeight: 'bold',
         },
       }}>
         <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ title: "HomeScreen" }} />
+        <Stack.Screen name="StudentLogin" component={StudentLogin} options={{ title: "StudentLogin" }} />
+        <Stack.Screen name="StudentSignup" component={StudentSignup} options={{ title: "StudentSignup" }} />
+        <Stack.Screen name="AdminLogin" component={AdminLogin} options={{ title: "AdminLogin" }} />
+        <Stack.Screen name="CompanyLogin" component={CompanyLogin} options={{ title: "CompanyLogin" }} />
         <Stack.Screen name="Details" component={Details} options={{ title: "Details" }} />
       </Stack.Navigator>
     </NavigationContainer>

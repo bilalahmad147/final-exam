@@ -1,18 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
 
+
     return (
         <View style={styles.container}>
-            <View style={{ flex: 1 }}>
-                <Text style={styles.btnText}>Register YourSelf</Text>
-                <TouchableOpacity onPress={() => navigation.navigate('Details')} style={styles.btn}>
-                    <Text style={styles.btnText}>Details Screen</Text>
-                </TouchableOpacity>
-            </View>
-            <StatusBar style="auto" />
+            <ScrollView>
+                <View style={{ flex: 1, padding: 30, marginTop: 30, alignItems: 'center' }}>
+                    {/* <Image style={{ width: 300, height: 170 }} source={require('./imgs/HomeScreenImg.png')} /> */}
+                </View>
+                <View style={{ flex: 1 }}>
+                    <TouchableOpacity onPress={() => navigation.navigate('StudentLogin')} style={styles.btn}>
+                        <Text style={styles.btnText}><Icon name="plus" size={20} /> Student Login</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('AdminLogin')} style={styles.btn}>
+                        <Text style={styles.btnText}><Icon name="plus" size={20} /> Admin Login</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('CompanyLogin')} style={styles.btn}>
+                        <Text style={styles.btnText}><Icon name="plus" size={20} /> Company Login</Text>
+                    </TouchableOpacity>
+                </View>
+                <StatusBar style="auto" />
+            </ScrollView>
         </View>
     );
 }
@@ -26,13 +38,13 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     btn: {
-        backgroundColor: "red",
+        backgroundColor: "#DF6589FF",
         padding: 9,
         margin: 5,
         borderRadius: 10,
     },
     btnText: {
-        color: "black",
+        color: "#3C1053FF",
         fontSize: 20,
         textAlign: 'center',
     }
