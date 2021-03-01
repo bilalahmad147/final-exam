@@ -31,14 +31,14 @@ export default function App() {
           fontWeight: 'bold',
         },
       }}>
-        {/* <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ title: "Recruitment System" }} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ title: "Recruitment System" }} />
         <Stack.Screen name="StudentLogin" component={StudentLogin} options={{ title: "StudentLogin" }} />
         <Stack.Screen name="StudentSignup" component={StudentSignup} options={{ title: "StudentSignup" }} />
         <Stack.Screen name="StudentProfile" component={StudentProfile} options={{ title: "StudentProfile" }} />
         <Stack.Screen name="SubmitDetail" component={SubmitDetail} options={{ title: "SubmitDetail" }} />
         <Stack.Screen name="AdminLogin" component={AdminLogin} options={{ title: "AdminLogin" }} />
         <Stack.Screen name="StudentsDetail" component={StudentsDetail} options={{ title: "StudentsDetail" }} />
-        <Stack.Screen name="MakeProfile" component={MakeProfile} options={{ title: "MakeProfile" }} /> */}
+        <Stack.Screen name="MakeProfile" component={MakeProfile} options={{ title: "MakeProfile" }} />
         <Stack.Screen name="AdminDashboard" component={AdminDashboard} options={{ title: "AdminDashboard" }} />
         <Stack.Screen name="Job" component={Job} options={{ title: "Post Job" }} />
       </Stack.Navigator>
